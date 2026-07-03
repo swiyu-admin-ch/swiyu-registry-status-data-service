@@ -18,7 +18,7 @@
 
     <groupId>ch.admin.bj.swiyu</groupId>
     <artifactId>swiyu-registry-status-data-service</artifactId>
-    <version>1.2.4-SNAPSHOT</version>
+    <version>1.2.5-SNAPSHOT</version>
     <name>swiyu-registry-status-data-service</name>
     <description>FOITT Status Data Service</description>
 
@@ -121,6 +121,16 @@
     <dependencyManagement>
         <dependencies>
             <!-- CVE-OVERRIDES Start -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.5.36</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>1.5.36</version>
+            </dependency>
             <!-- CVE-OVERRIDES End -->
         </dependencies>
     </dependencyManagement>
