@@ -18,7 +18,7 @@
 
     <groupId>ch.admin.bj.swiyu</groupId>
     <artifactId>swiyu-registry-status-data-service</artifactId>
-    <version>1.2.5-SNAPSHOT</version>
+    <version>1.2.6-SNAPSHOT</version>
     <name>swiyu-registry-status-data-service</name>
     <description>FOITT Status Data Service</description>
 
