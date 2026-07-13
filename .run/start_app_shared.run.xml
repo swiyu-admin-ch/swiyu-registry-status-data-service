@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="start:app:shared" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <option name="ACTIVE_PROFILES" value="local,shared" />
+    <option name="ACTIVE_PROFILES" value="local,shared,ssl-secrets" />
     <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
     <module name="swiyu-registry-status-data-service" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="ch.admin.bj.swiyu.registry.status.data.Application" />

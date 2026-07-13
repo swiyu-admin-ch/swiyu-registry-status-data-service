@@ -11,7 +11,7 @@
 spring:
   datasource: # the datasource from authoring service
     url: "jdbc:postgresql://localhost:5280/status-registry-db"
-    username: "postgres"§
+    username: "postgres"
     password: "secret"
   jpa:
     properties:
