@@ -18,7 +18,7 @@
 
     <groupId>ch.admin.bj.swiyu</groupId>
     <artifactId>swiyu-registry-status-data-service</artifactId>
-    <version>1.2.6-SNAPSHOT</version>
+    <version>1.3.1-SNAPSHOT</version>
     <name>swiyu-registry-status-data-service</name>
     <description>FOITT Status Data Service</description>
 
@@ -26,11 +26,11 @@
         <java.version>25</java.version>
         <springdoc-openapi-starter.version>2.8.5</springdoc-openapi-starter.version>
         <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
-        <spotless-maven-plugin.version>3.2.1</spotless-maven-plugin.version>
+        <spotless-maven-plugin.version>3.8.0</spotless-maven-plugin.version>
         <cleanthat.version>2.22</cleanthat.version>
         <prettier.version>3.5.3</prettier.version>
         <prettier-plugin-java.version>2.6.7</prettier-plugin-java.version>
-        <archunit-junit5.version>1.4.1</archunit-junit5.version>
+        <archunit-junit5.version>1.4.2</archunit-junit5.version>
         <maven-compiler.version>3.15.0</maven-compiler.version>
         <git-build-hook.version>3.5.0</git-build-hook.version>
         <lombok.version>1.18.42</lombok.version>
@@ -124,12 +124,12 @@
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.5.36</version>
+                <version>1.5.37</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.5.36</version>
+                <version>1.5.37</version>
             </dependency>
             <!-- CVE-OVERRIDES End -->
         </dependencies>
@@ -142,7 +142,7 @@
                     <!-- Hotfix for archunit incompatibility: https://github.com/apache/maven-surefire/issues/839 -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.5.5</version>
+                    <version>3.5.6</version>
                 </plugin>
             </plugins>
         </pluginManagement>
