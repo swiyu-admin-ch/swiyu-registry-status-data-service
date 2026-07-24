@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.3
+
+### Changed
+
+- Upgrade jeap-spring-boot-parent -> 37.5.0
+
+## 1.3.2
+
+### Changed
+
+- Migrate to Spring Boot 4 (jeap-spring-boot-parent 33.11.0 -> 36.1.1)
+- Bump logback override to 1.5.38 (definitive fix for CVE-2026-13006)
+- Override tomcat.version to 11.0.23 to resolve CVE-2026-55955 (parent's default 11.0.22 was still affected); remove
+  now-obsolete Snyk ignore
+
 ## 1.3.1
 
 ### Changed
@@ -86,7 +101,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update org.jacoco:jacoco-maven-plugin from 0.8.13 to 0.8.14
 - Update ch.admin.bit.jeap:jeap-spring-boot-parent from 27.2.0 to 28.3.0
 
-
 ## 1.1.13
 
 ### Changed
@@ -100,8 +114,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update org.apache.maven.plugins:maven-compiler-plugin from 3.14.0 to 3.14.1
 - Update com.diffplug.spotless:spotless-maven-plugin from 2.45.0 to 3.0.0
 - Update ch.admin.bit.jeap:jeap-spring-boot-parent from 26.68.0 to 27.2.0
-
-
 
 ## 1.1.12
 
@@ -117,12 +129,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update com.diffplug.spotless:spotless-maven-plugin from 2.44.4 to 2.45.0
 - Update ch.admin.bit.jeap:jeap-spring-boot-parent from 26.50.1 to 26.68.0
 
-
 ## 1.1.10
 
 ### Other
 
-- Downgrade maven-surefire-plugin due to archunit incompatibility	
+- Downgrade maven-surefire-plugin due to archunit incompatibility
 
 ## 1.1.9
 
@@ -136,7 +147,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update org.apache.maven.plugins:maven-surefire-plugin from 3.5.2 to 3.5.3
 - Update ch.admin.bit.jeap:jeap-spring-boot-parent from 26.50.0 to 26.50.1
-
 
 ## 1.1.7
 
