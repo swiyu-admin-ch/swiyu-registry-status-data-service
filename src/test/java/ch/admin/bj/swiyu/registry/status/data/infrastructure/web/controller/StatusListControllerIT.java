@@ -57,6 +57,39 @@ class StatusListControllerIT {
     }
 
     @Test
+    void testCheck_withUnsupportedQueryParameter_response() throws Exception {
+        var id = "00000000-0000-0000-0000-000000000001";
+        mvc
+            .perform(get(STATUSLIST_BASE_URL + id + ".jwt").queryParam("time", "1735689600"))
+            .andExpect(status().isNotImplemented());
+    }
+
+    @Test
+    void testCheck_withArbitraryQueryParameter_response() throws Exception {
+        var id = "00000000-0000-0000-0000-000000000001";
+        mvc
+            .perform(get(STATUSLIST_BASE_URL + id + ".jwt").queryParam("somethingElse", "value"))
+            .andExpect(status().isNotImplemented());
+    }
+
+    @Test
+    void testCheck_withUnsupportedQueryParameterOnUnknownId_returnsNotImplemented() throws Exception {
+        // Request validation takes precedence over resolving the datastore entry
+        mvc
+            .perform(get(STATUSLIST_BASE_URL + "00000000-0000-0000-0000-00000000000a.jwt").queryParam("time", "1"))
+            .andExpect(status().isNotImplemented());
+    }
+
+    @Test
+    void testCheck_withEmptyQueryString_response() throws Exception {
+        var id = "00000000-0000-0000-0000-000000000001";
+        mvc
+            .perform(get(STATUSLIST_BASE_URL + id + ".jwt?"))
+            .andExpect(status().isOk())
+            .andExpect(content().string("TEST_READ"));
+    }
+
+    @Test
     void testCheck_statusIsDisabled_response() throws Exception {
         mvc
             .perform(get(STATUSLIST_BASE_URL + "00000000-0000-0000-0000-000000000004.jwt"))

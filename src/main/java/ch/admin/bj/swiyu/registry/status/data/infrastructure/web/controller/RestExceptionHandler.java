@@ -9,6 +9,7 @@ package ch.admin.bj.swiyu.registry.status.data.infrastructure.web.controller;
 import ch.admin.bj.swiyu.registry.status.data.api.ApiErrorDto;
 import ch.admin.bj.swiyu.registry.status.data.common.exception.ResourceNotFoundException;
 import ch.admin.bj.swiyu.registry.status.data.common.exception.ResourceNotReadyException;
+import ch.admin.bj.swiyu.registry.status.data.common.exception.UnsupportedQueryParameterException;
 import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
@@ -37,6 +38,15 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         log.info(exception.getMessage());
 
         return new ResponseEntity<>(exception.getMessage(), HttpStatus.TOO_EARLY);
+    }
+
+    @ExceptionHandler(UnsupportedQueryParameterException.class)
+    protected ResponseEntity<Object> handleUnsupportedQueryParameterException(
+        final UnsupportedQueryParameterException exception
+    ) {
+        log.info(exception.getMessage());
+
+        return new ResponseEntity<>(exception.getMessage(), HttpStatus.NOT_IMPLEMENTED);
     }
 
     @ExceptionHandler(IOException.class)
