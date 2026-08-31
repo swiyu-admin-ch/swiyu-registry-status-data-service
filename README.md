@@ -22,7 +22,7 @@ This repository does contain the current implementation for the status registry.
 ## Overview
 
 For a general overview of the public beta environment and its components, please check
-the [swiyu Sandbox context](https://swiyu-admin-ch.github.io/open-source-components/#sandbox).
+the [Public Beta context](https://swiyu-admin-ch.github.io/open-source-components/#public-beta).
 
 This service provides all the protocol conform read operations.
 
