@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.9
+
+### Changed
+
+- Update jeap-spring-boot-parent 41.3.0 -> 41.14.0 to fix the Jackson CVEs reported by Snyk: jackson 2.x 2.22.2 ->
+  2.22.3 and jackson 3.x 3.2.2 -> 3.2.3 are managed by the parent as of 41.13.0, so no CVE override is needed
+
 ## 1.3.8
 
 ### Added
