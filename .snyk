@@ -2,6 +2,11 @@
 version: v1.25.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
+  SNYK-JAVA-ORGGLASSFISHJAXB-20883142:
+    - '*':
+        reason: No published fix available yet. Fix for XXE in jaxb-core merged to jaxb-ri master (eclipse-ee4j/jaxb-ri PR 2013) but not yet released; latest published version is 4.0.9. Upstream release ETA unknown (eclipse-ee4j/jaxb-ri issue 2031). Also low practical exploitability here as jaxb is only used internally by Hibernate, not for unmarshalling untrusted XML. Revisit when a patched version is published.
+        expires: 2027-01-16T09:00:00.000Z
+        created: 2026-10-16T16:12:00.000Z
   SNYK-RHEL9-LIBCURLMINIMAL-17878844:
     - '*':
         reason: No fix available in ubi9 JRE base image yet

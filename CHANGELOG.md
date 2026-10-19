@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.12
+
+### Fixed
+
+- Fix YAML formatting in .snyk ignore reason for SNYK-JAVA-ORGGLASSFISHJAXB-20883142 (colon in reason text broke parsing)
+
+## 1.3.11
+
+### Fixed
+
+- Override PostgreSQL to 42.7.14 to fix Snyk high severity finding SNYK-JAVA-ORGPOSTGRESQL-20571163 (not failing securely / 'failing open' in requireAuth)
+
 ## 1.3.10
 
 ### Fixed
