@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.20
+
+### Changed
+
+- Use single query on successful statuslist resolvance
+
 ## 1.3.19
 
 ### Changed
@@ -21,17 +27,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Upgrade the jEAP Spring Boot parent from 41.28.0 to 41.30.0 and remove the obsolete Jackson overrides: the parent now manages Jackson 2.22.4 / 3.2.4
+- Upgrade the jEAP Spring Boot parent from 41.28.0 to 41.30.0 and remove the obsolete Jackson overrides: the parent now
+  manages Jackson 2.22.4 / 3.2.4
 
 ## 1.3.16
 
 ### Changed
 
-- Upgrade the jEAP Spring Boot parent from 41.23.0 to 41.28.0 and remove the obsolete Tomcat and PostgreSQL overrides: the parent now manages Tomcat 11.0.27 and PostgreSQL 42.7.14
+- Upgrade the jEAP Spring Boot parent from 41.23.0 to 41.28.0 and remove the obsolete Tomcat and PostgreSQL overrides:
+  the parent now manages Tomcat 11.0.27 and PostgreSQL 42.7.14
 
 ### Fixed
 
-- Override Jackson to 2.22.4 / 3.2.4 to fix the critical deserialization findings SNYK-JAVA-COMFASTERXMLJACKSONCORE-21761837 and SNYK-JAVA-TOOLSJACKSONCORE-21761838
+- Override Jackson to 2.22.4 / 3.2.4 to fix the critical deserialization findings
+  SNYK-JAVA-COMFASTERXMLJACKSONCORE-21761837 and SNYK-JAVA-TOOLSJACKSONCORE-21761838
 
 ## 1.3.15
 
@@ -43,7 +52,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Override the embedded Tomcat to 11.0.27 to fix six Snyk findings on Tomcat 11.0.25 (four critical and two high, including CVE-2026-101356 and CVE-2026-101296); 11.0.26 was no longer sufficient
+- Override the embedded Tomcat to 11.0.27 to fix six Snyk findings on Tomcat 11.0.25 (four critical and two high,
+  including CVE-2026-101356 and CVE-2026-101296); 11.0.26 was no longer sufficient
 
 ## 1.3.13
 
@@ -55,19 +65,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix YAML formatting in .snyk ignore reason for SNYK-JAVA-ORGGLASSFISHJAXB-20883142 (colon in reason text broke parsing)
+- Fix YAML formatting in .snyk ignore reason for SNYK-JAVA-ORGGLASSFISHJAXB-20883142 (colon in reason text broke
+  parsing)
 
 ## 1.3.11
 
 ### Fixed
 
-- Override PostgreSQL to 42.7.14 to fix Snyk high severity finding SNYK-JAVA-ORGPOSTGRESQL-20571163 (not failing securely / 'failing open' in requireAuth)
+- Override PostgreSQL to 42.7.14 to fix Snyk high severity finding SNYK-JAVA-ORGPOSTGRESQL-20571163 (not failing
+  securely / 'failing open' in requireAuth)
 
 ## 1.3.10
 
 ### Fixed
 
-- Override Tomcat to 11.0.26 to fix Snyk critical severity finding SNYK-JAVA-ORGAPACHETOMCATEMBED-20552494 (authentication bypass by alternate name)
+- Override Tomcat to 11.0.26 to fix Snyk critical severity finding SNYK-JAVA-ORGAPACHETOMCATEMBED-20552494
+  (authentication bypass by alternate name)
 
 ## 1.3.9
 
@@ -86,7 +99,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update dependencies: jeap-spring-boot-parent 41.3.0, postgres 17.11, spotless-maven-plugin 3.10.2, archunit-junit5 1.5.0, maven-compiler 3.16.0, maven-surefire-plugin 3.6.0, sonar-maven-plugin 5.8.0.7211
+- Update dependencies: jeap-spring-boot-parent 41.3.0, postgres 17.11, spotless-maven-plugin 3.10.2, archunit-junit5
+  1.5.0, maven-compiler 3.16.0, maven-surefire-plugin 3.6.0, sonar-maven-plugin 5.8.0.7211
 
 ## 1.3.6
 
