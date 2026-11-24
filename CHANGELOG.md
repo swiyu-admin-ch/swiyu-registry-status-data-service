@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.24
+
+### Changed
+
+- Update maven from 3.9.16 to 3.10.2
+- Update postgres from 17.11 to 17.12
+- Update org.sonarsource.scanner.maven:sonar-maven-plugin from 5.8.0.7211 to 5.9.0.7382
+- Update org.apache.maven.plugins:maven-surefire-plugin from 3.6.0 to 3.6.1
+- Update com.tngtech.archunit:archunit-junit5 from 1.5.0 to 1.5.1
+- Update com.diffplug.spotless:spotless-maven-plugin from 3.10.2 to 3.12.0
+- Update ch.admin.bit.jeap:jeap-spring-boot-parent from 41.37.0 to 41.41.0
+
+
 ## 1.3.23
 
 ### Changed

@@ -5,21 +5,20 @@
   ~ SPDX-License-Identifier: MIT
   -->
 
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>ch.admin.bit.jeap</groupId>
         <artifactId>jeap-spring-boot-parent</artifactId>
         <!-- Attention when updating: always check if some overrides in CVE-OVERRIDES section can be removed  -->
-        <version>41.37.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>41.41.0</version>
+        <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>ch.admin.bj.swiyu</groupId>
     <artifactId>swiyu-registry-status-data-service</artifactId>
-    <version>1.3.23-SNAPSHOT</version>
+    <version>1.3.24-SNAPSHOT</version>
     <name>swiyu-registry-status-data-service</name>
     <description>FOITT Status Data Service</description>
 
@@ -27,11 +26,11 @@
         <java.version>25</java.version>
         <springdoc-openapi-starter.version>2.8.5</springdoc-openapi-starter.version>
         <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
-        <spotless-maven-plugin.version>3.10.2</spotless-maven-plugin.version>
+        <spotless-maven-plugin.version>3.12.0</spotless-maven-plugin.version>
         <cleanthat.version>2.22</cleanthat.version>
         <prettier.version>3.5.3</prettier.version>
         <prettier-plugin-java.version>2.6.7</prettier-plugin-java.version>
-        <archunit-junit5.version>1.5.0</archunit-junit5.version>
+        <archunit-junit5.version>1.5.1</archunit-junit5.version>
         <maven-compiler.version>3.16.0</maven-compiler.version>
         <git-build-hook.version>3.5.0</git-build-hook.version>
         <lombok.version>1.18.42</lombok.version>
@@ -134,13 +133,13 @@
                     <!-- Hotfix for archunit incompatibility: https://github.com/apache/maven-surefire/issues/839 -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.6.0</version>
+                    <version>3.6.1</version>
                 </plugin>
                 <!-- Needed by RHOS Java Build Pipeline -->
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
-                    <version>5.8.0.7211</version>
+                    <version>5.9.0.7382</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -236,7 +235,7 @@
                         <importOrder>
                             <order>java,javax,com,de,lombok,net,org</order>
                         </importOrder>
-                        <removeUnusedImports/>
+                        <removeUnusedImports />
                         <prettier>
                             <devDependencies>
                                 <prettier>${prettier.version}</prettier>
