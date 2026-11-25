@@ -18,7 +18,7 @@
 
     <groupId>ch.admin.bj.swiyu</groupId>
     <artifactId>swiyu-registry-status-data-service</artifactId>
-    <version>1.3.24-SNAPSHOT</version>
+    <version>1.3.25-SNAPSHOT</version>
     <name>swiyu-registry-status-data-service</name>
     <description>FOITT Status Data Service</description>
 
@@ -124,6 +124,57 @@
     </dependencies>
     <dependencyManagement>
         <!-- CVE-OVERRIDES Start -->
+        <dependencies>
+            <!-- The jEAP parent 41.41.0 (the latest) pins every Spring Boot, Spring Framework and
+                 Spring Security artifact literally, so the spring-boot.version, spring-framework.version
+                 and spring-security.version properties have no effect. Spring Boot 4.1.3 is the first
+                 release that fixes SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-22729051 (high, insecure temporary
+                 file, spring-boot-actuator) and SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-22730851 (critical, use
+                 of non-canonical URL paths for authorization decisions, spring-boot-security). It ships
+                 Spring Framework 7.0.11 (fixes the spring-beans, spring-core and spring-web findings) and
+                 Spring Security 7.1.3 (fixes the spring-security-core and spring-security-web findings);
+                 both are imported as BOMs so the whole framework families stay consistent.
+                 Remove when the parent manages Spring Boot >= 4.1.3. -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot</artifactId>
+                <version>4.1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>4.1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-actuator</artifactId>
+                <version>4.1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-actuator-autoconfigure</artifactId>
+                <version>4.1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-security</artifactId>
+                <version>4.1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>7.0.11</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-bom</artifactId>
+                <version>7.1.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
         <!-- CVE-OVERRIDES End -->
     </dependencyManagement>
     <build>

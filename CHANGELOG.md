@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.3.25
+
+### Changed
+
+- Override Spring Boot to 4.1.3, Spring Framework to 7.0.11 and Spring Security to 7.1.3 to fix seven Snyk
+  findings (three critical, four high) in spring-boot-actuator, spring-boot-security, spring-beans,
+  spring-core, spring-web, spring-security-core and spring-security-web; the latest jEAP parent still manages
+  Spring Boot 4.1.2 and pins the Spring versions literally
+- Re-scan the dependency tree and the container image with Snyk: no open high or critical findings
+
 ## 1.3.24
 
 ### Changed
